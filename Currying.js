@@ -36,24 +36,4 @@ let numberTimesTen = multiplyByTen(9) //Ths function will send 2nd arument ie nu
 console.log(numberTimesTen) // Prints 90
 
 
-//Example 3 
-//Anathor common use of currying is function composition
-//Allows calling functions in  a specific order
-let addCustomer = fn => (...args) => {
-    console.log('Saving customer info ...')
-    return fn(...args)
-} 
-
-let processOrder = fn => (...args) => {
-    console.log(`Processing order #${args[0]}`)
-    return fn(...args)
-}
-
-let completeOrder = (...args) => {
-    console.log(`Order #${[...args].toString()} completed`)
-}
-
-completeOrder = processOrder(completeOrder)
-completeOrder = addCustomer(completeOrder)
-completeOrder('7777',"Hrishikesh's order")
 
