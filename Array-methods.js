@@ -59,3 +59,4 @@ const isEveryItem = items.every((item)=>{
     return item.price <=1000
 })
 console.log(isEveryItem)
+
